@@ -1,3 +1,4 @@
+import 'package:api_hash/register_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -84,15 +85,30 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.pink,
                             borderRadius: BorderRadius.circular(50)),
                         child: const Text(
-                          'Entrar',
+                          'ENTRAR',
                           style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => RegisterPage(),
+                      ),
+                    ),
+                    // ignore: prefer_const_constructors
+                    child: Text(
+                      "Faça seu cadastro agora",
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          color: Colors.pink,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ],
               ),
             ),
